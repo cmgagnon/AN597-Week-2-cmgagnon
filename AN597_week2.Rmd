@@ -11,23 +11,122 @@ hi!
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Here is my edit!
-## R Markdown
+#Module 4
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+m <- matrix(data=c(1,2,3,4),nrow=2,ncol=2)
+m
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+m <- matrix(data=c(1,2,3,4,5,6),nrow=2,ncol=3,byrow=FALSE)
+m
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+m <- matrix(data=c(1,2,3,4,5,6),nrow=2,ncol=3,byrow=TRUE)
+m
+```
+
+```{r}
+v1 <- c(1,2,3,4)
+v2 <- c(6,7,8,9)
+m1 <- rbind(v1,v2)
+m1
+```
+
+```{r}
+m2 <- cbind(v1,v2)
+m2
+```
+
+```{r}
+class(m1)
+```
+
+```{r}
+dim(m1)
+```
+
+```{r}
+class(m2)
+```
+
+```{r}
+dim(m2)
+```
+
+```{r}
+colnames(m2)
+```
+
+```{r}
+rownames(m2)
+```
+
+```{r}
+str(m2)
+```
+
+```{r}
+a <- array(data=1:90, dim=c(5,6,3))
+a
+```
+
+```{r}
+v <- 1:100
+v
+```
+
+```{r}
+v[1:15]
+```
+
+```{r}
+v[c(2,4,6,8,10)]
+```
+
+```{r}
+v <- 101:200
+v[seq(from = 1, to = 100, by = 2)]
+```
+
+#Challenge 1
+Input data into R
+```{r}
+u <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+u
+```
+Remove punctuation
+```{r}
+v <- gsub("[[:punct:]]","",u)
+v
+```
+Split my string into substrings
+```{r}
+w <- strsplit(v," ")[[1]]
+w
+```
+
+```{r}
+z<-matrix(w, nrow = 22 , ncol = 1)
+z
+```
+```{r}
+z[c(3,6,9,12,15,18,21)]
+```
+
+
+
+#Challenge 2
+```{r}
+m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE,)
+m
+```
+
+```{r}
+x <- subset(m,)
+x
+```
+
+
