@@ -13,85 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #Module 4
 
-```{r}
-m <- matrix(data=c(1,2,3,4),nrow=2,ncol=2)
-m
-```
 
-```{r}
-m <- matrix(data=c(1,2,3,4,5,6),nrow=2,ncol=3,byrow=FALSE)
-m
-```
-
-```{r}
-m <- matrix(data=c(1,2,3,4,5,6),nrow=2,ncol=3,byrow=TRUE)
-m
-```
-
-```{r}
-v1 <- c(1,2,3,4)
-v2 <- c(6,7,8,9)
-m1 <- rbind(v1,v2)
-m1
-```
-
-```{r}
-m2 <- cbind(v1,v2)
-m2
-```
-
-```{r}
-class(m1)
-```
-
-```{r}
-dim(m1)
-```
-
-```{r}
-class(m2)
-```
-
-```{r}
-dim(m2)
-```
-
-```{r}
-colnames(m2)
-```
-
-```{r}
-rownames(m2)
-```
-
-```{r}
-str(m2)
-```
-
-```{r}
-a <- array(data=1:90, dim=c(5,6,3))
-a
-```
-
-```{r}
-v <- 1:100
-v
-```
-
-```{r}
-v[1:15]
-```
-
-```{r}
-v[c(2,4,6,8,10)]
-```
-
-```{r}
-v <- 101:200
-v[seq(from = 1, to = 100, by = 2)]
-```
-
-#Challenge 1
+##Challenge 1
 Input data into R
 ```{r}
 u <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
@@ -118,15 +41,92 @@ z[c(3,6,9,12,15,18,21)]
 
 
 
-#Challenge 2
+##Challenge 2
 ```{r}
 m <- matrix(data=1:80,nrow=8,ncol=10,byrow=FALSE,)
 m
 ```
 
 ```{r}
-x <- subset(m,)
+x1<-m[1:8,2:3]
+x1
+x2<-m[1:8,6]
+x2
+x<-cbind(x1,x2)
 x
 ```
 
+```{r}
+x<-m[6:8,1:9]
+x
+```
+
+```{r}
+m
+x<-m[2:6,2:9]
+x
+```
+
+##Challenge 3
+```{r}
+a<-array(data=400:1, dim=c(5,5,4,4))
+a
+```
+
+```{r}
+a[1, 1, 1, 2]
+```
+
+```{r}
+a[2, 3, 2, ]
+```
+
+```{r}
+a[1:5, 1:5, 3, 3]
+```
+
+#Challenge 4
+```{r}
+p<-list("Primates",
+"Haplorhini",
+"Anthropoidea",
+"Platyrrhini",
+"Cebidae",
+"Atelidae",
+"Pitheciidae",
+"Catarrhini",
+"Cercopithecidae",
+"Hylobatidae",
+"Hominidae",
+"Tarsioidea",
+"Tarsiidae",
+"Strepsirhini",
+"Lorisoidea",
+"Lorisidae",
+"Galagidae",
+"Lemuroidea",
+"Cheirogaleidae",
+"Lepilemuridae",
+"Indriidae",
+"Lemuridae",
+"Daubentoniidae")
+p
+```
+
+```{r}
+b<-matrix(c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2),nrow=5,ncol=3,byrow=TRUE)
+b
+```
+
+```{r}
+df <- data.frame(b)
+df
+```
+
+```{r}
+<-data.frame(V1 = as.numeric(1:5), V2 = as.numeric(1:5), V3 = as.factor(1:5), stringsAsFactors = FALSE)
+as.logical(df$X2) 
+as.factor(df$X3)
+str(df)
+```
 
