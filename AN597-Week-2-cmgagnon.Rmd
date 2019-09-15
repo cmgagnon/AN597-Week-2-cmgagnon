@@ -96,7 +96,8 @@ a[1:5, 1:5, 3, 3]
 ```
 
 #Challenge 4
-This one is hard, I'm not sure if this is what he is looking for:
+##Part 1
+My first attempt at making a taxonomic list of primates:
 ```{r}
 a<-list("Primates",
         "Haplorhini",
@@ -114,7 +115,31 @@ a<-list("Primates",
         c("Cheirogaleidae","Lepilemuridae","Indriidae","Lemuridae","Daubentoniidae"))
 a
 ```
+This is ok but someone in my peer group found a better way. Let me see if I can recreate:
+```{r}
+Haplorhini<-list("Anthropoidea","Tarsioidea")
+Haplorhini
+Anthropoidea<-list("Platyrrhini","Catarrhini")
+Anthropoidea
+Platyrrhini<-list("Cebidae","Atelidae","Pitheciidae")
+Platyrrhini 
+Catarrhini<-list("Cercopithecidae","Hylobatidae","Hominidae")
+Catarrhini
+Tarsioidea<-list("Tarsiidae")
+Tarsioidea 
+Strepsirhini<-list("Lorisoidea","Lemuroidea")
+Strepsirhini
+Lorisoidea<-list("Lorisidae","Galagidae")
+Lorisoidea
+Lemuroidea<-list("Cheirogaleidae","Lepilemuridae","Indriidae","Lemuridae","Daubentoniidae")
+Lemuroidea
 
+Primates = c(Haplorhini=c(Anthropoidea=c(Catarrhini=c(Catarrhini), Platyrrhini=c(Platyrrhini)), Tarsioidea = c("Tarsiidae")), Strepsirhini=c(Lorisoidea=c(Lorisoidea), Lemuroidea=c(Lemuroidea)))
+Primates
+```
+Ok thats not bad! Don't love that the sub groups are numbered though. 
+
+##Part 2
 Create the 5x3 matrix ordered by row using the provided number
 ```{r}
 b<-matrix(c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2),nrow=5,ncol=3,byrow=TRUE)
@@ -127,7 +152,7 @@ df <- data.frame(b)
 df
 ```
 
-Convert column 2 to logical and column 3 to factor
+Read column 2 values as logical and column 3 values as factors
 ```{r}
 as.logical(df$X2)
 as.factor(df$X3)
@@ -135,3 +160,11 @@ str(df)
 
 ```
 
+I didn't actually coerce the columns 2 and 3 into logical and factor permanently butt I was able to read them as such. I played around with a few things to find a way, but I was not successful.
+
+#Five Biggest Challenges
+1) I had a hard time trying to format my vector in a way that would make it easy to obtain every third word.
+2)Changing my repository name was more of a challenge than expected. I couldn't get git desktop to recognize the online repo. Finally ended up starting a new repo, new project and new Rmd and got everything to work with versioon control.
+3)The taxonomic tree took me a few attempts. It wasn't until I saw how one of my peers did that I was able to figure out a better way of my own.
+4)In part 2 of challenge 4, I couldn't figure out how too permanently coerce columns 2 and 3 as logical and factors, respectively.
+5)Took me a little bit to figure out hoow to cloone my peers repositories and link them to git in order to leave my comments.
