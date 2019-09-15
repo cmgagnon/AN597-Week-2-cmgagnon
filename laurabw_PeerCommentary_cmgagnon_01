@@ -96,8 +96,7 @@ a[1:5, 1:5, 3, 3]
 ```
 
 #Challenge 4
-##Part 1
-My first attempt at making a taxonomic list of primates:
+This one is hard, I'm not sure if this is what he is looking for:
 ```{r}
 a<-list("Primates",
         "Haplorhini",
@@ -115,31 +114,7 @@ a<-list("Primates",
         c("Cheirogaleidae","Lepilemuridae","Indriidae","Lemuridae","Daubentoniidae"))
 a
 ```
-This is ok but someone in my peer group found a better way. Let me see if I can recreate:
-```{r}
-Haplorhini<-list("Anthropoidea","Tarsioidea")
-Haplorhini
-Anthropoidea<-list("Platyrrhini","Catarrhini")
-Anthropoidea
-Platyrrhini<-list("Cebidae","Atelidae","Pitheciidae")
-Platyrrhini 
-Catarrhini<-list("Cercopithecidae","Hylobatidae","Hominidae")
-Catarrhini
-Tarsioidea<-list("Tarsiidae")
-Tarsioidea 
-Strepsirhini<-list("Lorisoidea","Lemuroidea")
-Strepsirhini
-Lorisoidea<-list("Lorisidae","Galagidae")
-Lorisoidea
-Lemuroidea<-list("Cheirogaleidae","Lepilemuridae","Indriidae","Lemuridae","Daubentoniidae")
-Lemuroidea
 
-Primates = c(Haplorhini=c(Anthropoidea=c(Catarrhini=c(Catarrhini), Platyrrhini=c(Platyrrhini)), Tarsioidea = c("Tarsiidae")), Strepsirhini=c(Lorisoidea=c(Lorisoidea), Lemuroidea=c(Lemuroidea)))
-Primates
-```
-Ok thats not bad! Don't love that the sub groups are numbered though. 
-
-##Part 2
 Create the 5x3 matrix ordered by row using the provided number
 ```{r}
 b<-matrix(c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2),nrow=5,ncol=3,byrow=TRUE)
@@ -152,7 +127,7 @@ df <- data.frame(b)
 df
 ```
 
-Read column 2 values as logical and column 3 values as factors
+Convert column 2 to logical and column 3 to factor
 ```{r}
 as.logical(df$X2)
 as.factor(df$X3)
@@ -161,17 +136,6 @@ str(df)
 ```
 Hi Christian-
 
-<<<<<<< HEAD
-I didn't actually coerce the columns 2 and 3 into logical and factor permanently butt I was able to read them as such. I played around with a few things to find a way, but I was not successful.
-
-#Five Biggest Challenges
-1) I had a hard time trying to format my vector in a way that would make it easy to obtain every third word.
-2)Changing my repository name was more of a challenge than expected. I couldn't get git desktop to recognize the online repo. Finally ended up starting a new repo, new project and new Rmd and got everything to work with versioon control.
-3)The taxonomic tree took me a few attempts. It wasn't until I saw how one of my peers did that I was able to figure out a better way of my own.
-4)In part 2 of challenge 4, I couldn't figure out how too permanently coerce columns 2 and 3 as logical and factors, respectively.
-5)Took me a little bit to figure out hoow to cloone my peers repositories and link them to git in order to leave my comments.
-=======
 Looking at your code and the html rendered from RMarkdown, everything in here looks pretty good! Seeing how you did a few things actually helped me see where I might be having a few issues myself. Thanks! It also looked like on the things we did similarly, we got the same answers. I like the list you did for the Primates question, and it looks like all three of us in our group did it a but differently, so I think this will be a good one to ask Chris as far as what he actually had in mind for us to do, or if there is some interesting command as far as making nested lists that we could learn? Honestly, that is all I have for you, but please let me know if you have specific questions! If you write down your five challenges next time, your peer group person can comment on those directly!
 
 Laura
->>>>>>> 9aed528fd2989a4a9aadbd3ac0b26dca0a220bd1
