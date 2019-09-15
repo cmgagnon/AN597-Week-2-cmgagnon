@@ -11,10 +11,9 @@ hi!
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#Module 4
+# Module 4
 
-
-##Challenge 1
+## Challenge 1
 Input data into R.
 ```{r}
 u <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
@@ -41,9 +40,7 @@ Obtaining every 3rd character by specifying every 3rd row.
 z[c(3,6,9,12,15,18,21)]
 ```
 
-
-
-##Challenge 2
+## Challenge 2
 
 This is the matrix we are given:
 ```{r}
@@ -74,7 +71,7 @@ x<-m[2:6,2:9]
 x
 ```
 
-##Challenge 3
+## Challenge 3
 
 Creating an array with the number 400 to 1 in decending order and dimensions of 5x5x4x4:
 ```{r}
@@ -95,8 +92,8 @@ a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
 ```
 
-#Challenge 4
-##Part 1
+## Challenge 4
+
 My first attempt at making a taxonomic list of primates:
 ```{r}
 a<-list("Primates",
@@ -139,7 +136,7 @@ Primates
 ```
 Ok thats not bad! Don't love that the sub groups are numbered though. 
 
-##Part 2
+## Challenge 5
 Create the 5x3 matrix ordered by row using the provided number
 ```{r}
 b<-matrix(c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2),nrow=5,ncol=3,byrow=TRUE)
@@ -159,19 +156,20 @@ as.factor(df$X3)
 str(df)
 
 ```
-Hi Christian-
 
-<<<<<<< HEAD
 I didn't actually coerce the columns 2 and 3 into logical and factor permanently butt I was able to read them as such. I played around with a few things to find a way, but I was not successful.
 
 #Five Biggest Challenges
 1) I had a hard time trying to format my vector in a way that would make it easy to obtain every third word.
-2)Changing my repository name was more of a challenge than expected. I couldn't get git desktop to recognize the online repo. Finally ended up starting a new repo, new project and new Rmd and got everything to work with versioon control.
+2)Changing my repository name was more of a challenge than expected. I couldn't get git desktop to recognize the online repo. Finally ended up starting a new repo, new project and new Rmd and got everything to work with version control.
 3)The taxonomic tree took me a few attempts. It wasn't until I saw how one of my peers did that I was able to figure out a better way of my own.
 4)In part 2 of challenge 4, I couldn't figure out how too permanently coerce columns 2 and 3 as logical and factors, respectively.
-5)Took me a little bit to figure out hoow to cloone my peers repositories and link them to git in order to leave my comments.
-=======
+5)Took me a little bit to figure out how to clone my peers repositories and link them to git in order to leave my comments.
+
+
+Hi Christian-
+
 Looking at your code and the html rendered from RMarkdown, everything in here looks pretty good! Seeing how you did a few things actually helped me see where I might be having a few issues myself. Thanks! It also looked like on the things we did similarly, we got the same answers. I like the list you did for the Primates question, and it looks like all three of us in our group did it a but differently, so I think this will be a good one to ask Chris as far as what he actually had in mind for us to do, or if there is some interesting command as far as making nested lists that we could learn? Honestly, that is all I have for you, but please let me know if you have specific questions! If you write down your five challenges next time, your peer group person can comment on those directly!
 
 Laura
->>>>>>> 9aed528fd2989a4a9aadbd3ac0b26dca0a220bd1
+
