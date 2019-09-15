@@ -134,4 +134,8 @@ as.factor(df$X3)
 str(df)
 
 ```
+Hi Christian-
 
+Looking at your code and the html rendered from RMarkdown, everything in here looks pretty good! Seeing how you did a few things actually helped me see where I might be having a few issues myself. Thanks! It also looked like on the things we did similarly, we got the same answers. I like the list you did for the Primates question, and it looks like all three of us in our group did it a but differently, so I think this will be a good one to ask Chris as far as what he actually had in mind for us to do, or if there is some interesting command as far as making nested lists that we could learn? Honestly, that is all I have for you, but please let me know if you have specific questions! If you write down your five challenges next time, your peer group person can comment on those directly!
+
+Laura
