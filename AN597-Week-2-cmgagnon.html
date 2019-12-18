@@ -270,7 +270,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -376,7 +375,8 @@ summary {
 <div id="challenge-1" class="section level2">
 <h2>Challenge 1</h2>
 <p>Input data into R.</p>
-<pre class="r"><code>u &lt;- &quot;Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.&quot;
+<pre class="r"><code>library(stringr)
+u &lt;- &quot;Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.&quot;
 u</code></pre>
 <pre><code>## [1] &quot;Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.&quot;</code></pre>
 <p>Remove punctuations.</p>
@@ -384,7 +384,7 @@ u</code></pre>
 v</code></pre>
 <pre><code>## [1] &quot;Stately plump Buck Mulligan came from the stairhead bearing a bowl of lather on which a mirror and a razor lay crossed&quot;</code></pre>
 <p>Split my string into substrings.</p>
-<pre class="r"><code>w &lt;- strsplit(v,&quot; &quot;)[[1]]
+<pre class="r"><code>w &lt;- str_split(v,&quot; &quot;)[[1]]
 w</code></pre>
 <pre><code>##  [1] &quot;Stately&quot;   &quot;plump&quot;     &quot;Buck&quot;      &quot;Mulligan&quot;  &quot;came&quot;     
 ##  [6] &quot;from&quot;      &quot;the&quot;       &quot;stairhead&quot; &quot;bearing&quot;   &quot;a&quot;        
