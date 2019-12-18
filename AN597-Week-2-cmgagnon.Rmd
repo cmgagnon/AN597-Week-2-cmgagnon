@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Challenge 1
 Input data into R.
 ```{r}
+library(stringr)
 u <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
 u
 ```
@@ -26,7 +27,7 @@ v
 ```
 Split my string into substrings.
 ```{r}
-w <- strsplit(v," ")[[1]]
+w <- str_split(v," ")[[1]]
 w
 ```
 Formating my string into a matrix where each word is a seperate row.
